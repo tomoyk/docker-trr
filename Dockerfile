@@ -5,5 +5,6 @@ MAINTAINER Tomoyuki KOYAMA webmaster@koyama.me
 RUN git clone https://github.com/kawabata/emacs-trr.git ~/.emacs-trr && \ 
 echo "(add-to-list 'load-path \"~/.emacs-trr\")\n(require 'trr)\n;; (setq trr-japanese t)  ;; uncomment this to play with Japanese mode" >> ~/.emacs
 
+# overwrite base-image
 WORKDIR /root
 ENTRYPOINT ["emacs","-f","trr"]
